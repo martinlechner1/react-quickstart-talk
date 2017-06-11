@@ -12,7 +12,8 @@ import {
   //Quote,
   Slide,
   Text,
-  //CodePane,
+  CodePane,
+  Code,
   Link,
   S
 } from "spectacle";
@@ -65,48 +66,153 @@ export default class Presentation extends React.Component {
             Martin Lechner - @martinlechner1
           </Text>
         </Slide>
-        <Slide>
-          <Heading size={6}>JSX</Heading>
+        <Slide notes="WTF HTML in JS?!? - Called JSX, Transpiled via babel">
+          <Heading size={6}>Hello World</Heading>
+          <CodePane
+            lang="jsx"
+            source={require("raw-loader!../../code/src/HelloWorld.js")}
+          />
+        </Slide>
+        <Slide notes="Props: Object passed to the component">
+          <Heading size={6}>Hello Extended</Heading>
+          <CodePane
+            lang="jsx"
+            source={require("raw-loader!../../code/src/Hello.js")}
+          />
+          <Text />
+          <CodePane
+            lang="jsx"
+            source={require("raw-loader!../../code/src/HelloApp.js")}
+          />
         </Slide>
         <Slide>
           <Heading size={6}>Components</Heading>
+          <Text>Independent, reusable pieces of UI</Text>
         </Slide>
         <Slide>
           <Heading size={6}>Props</Heading>
+          <Text>Anything can be passed via attributes as seen before</Text>
         </Slide>
-        <Slide>
+        <Slide notes="ES6 classes, Note this.props!">
           <Heading size={6}>Class Components</Heading>
+          <CodePane
+            lang="jsx"
+            source={require("raw-loader!../../code/src/HelloClass.js")}
+          />
         </Slide>
         <Slide>
           <Heading size={6}>State</Heading>
+          <CodePane
+            lang="jsx"
+            source={require("raw-loader!../../code/src/HelloState.js")}
+          />
         </Slide>
         <Slide>
           <Heading size={6}>Lifecycle</Heading>
+          <Text>Hooks for certain events</Text>
+          <Text>
+            Mount: Component is created and inserted into DOM the first time.
+          </Text>
+          <Text>Update: Changes to props or state</Text>
         </Slide>
         <Slide>
-          <Heading size={6}>Architectural Considerations</Heading>
+          <Heading size={6}>Refs</Heading>
+          <CodePane
+            lang="jsx"
+            source={require("raw-loader!../../code/src/RefExample.js")}
+          />
         </Slide>
-        <Slide>
+        <Slide notes="Wraps other components and has access to props">
           <Heading size={6}>Higher Order Components</Heading>
+          <CodePane
+            lang="jsx"
+            source={require("raw-loader!../../code/src/logProps.js")}
+          />
+          <Text />
+          <CodePane
+            lang="jsx"
+            source={require("raw-loader!../../code/src/HelloWithLog.js")}
+          />
         </Slide>
         <Slide>
-          <Heading size={6}>Pain of modern JS</Heading>
+          <Heading size={6}>Testing</Heading>
+          <Text>Jest</Text>
+          <Text>Enzyme</Text>
         </Slide>
         <Slide>
-          <Heading size={6}>Create React App ftw!</Heading>
+          <Heading size={6}>Server side rendering</Heading>
+          <Text>Bring down time to first meaningful paint</Text>
+          <Text>When JS is fully loaded ui becomes interactive</Text>
+          <Text>Some frameworks, e.g. zeit/next.js</Text>
+        </Slide>
+        <Slide notes="babel, webpack, etc.">
+          <Heading size={6}>Let's get started!</Heading>
+          <Text>Want to configure a zillion of Tools?</Text>
         </Slide>
         <Slide>
-          <Heading size={6}>Pain of State Management</Heading>
+          <Heading size={6}>Create-React-App ftw!</Heading>
+          <Text>Creates a project using good standards</Text>
+          <Text>Hides the build config from you</Text>
+          <Text>PWA via Service Worker out of the box!</Text>
+        </Slide>
+        <Slide transition={["fade"]} transitionDuration={1000}>
+          <Heading size={6}>Ecosystem</Heading>
+        </Slide>
+        <Slide>
+          <Heading size={6}>State Management</Heading>
         </Slide>
         <Slide>
           <Heading size={6}>Redux</Heading>
+          {/* TODO*/}
         </Slide>
         <Slide>
-          <Heading size={6}>React-Redux</Heading>
+          <Heading size={6}>MobX</Heading>
+          {/* TODO*/}
         </Slide>
         <Slide>
           <Heading size={6}>React Native</Heading>
+          <Text>Native Bridge: JS -&gt; Native Elements</Text>
+          <Text>e.g. <Code>{"<View />"}</Code> -&gt; UIView, android.View</Text>
+          <Text>Create-React-Native-App</Text>
+          <Link href="https://snack.expo.io">
+            Playground
+          </Link>
         </Slide>
+        <Slide>
+          <Heading size={6}>React VR</Heading>
+          <CodePane
+            lang="jsx"
+            source={require("raw-loader!../../vr/index.vr.js")}
+          />
+        </Slide>
+        <Slide>
+          <Heading size={6}>React VR</Heading>
+          <Link href="http://localhost:8081/vr/">
+            Demo
+          </Link>
+        </Slide>
+        <Slide>
+          <Heading size={6}>Flow</Heading>
+          <Text>Static Type Checker</Text>
+          <Text>Type Annotations</Text>
+          <Text>Powerful Type Inference</Text>
+        </Slide>
+        <Slide>
+          <Heading size={6}>GraphQL</Heading>
+          <Text>Query language for your API</Text>
+          <Text>
+            Typed Schema -&gt; Query -&gt; Only get what you requested
+          </Text>
+          <Text>Relay</Text>
+          <Text>Apollo</Text>
+        </Slide>
+        <Slide>
+          <Heading size={6}>Reason</Heading>
+          <Text>OCaml Dialect + Toolbox</Text>
+          <Text>Based on bloomberg/bucklescript</Text>
+          <Text>Bindings for React API</Text>
+        </Slide>
+
         {/*
         <Slide transition={['fade']} bgColor="tertiary">
           <Heading size={6} textColor="primary" caps>Typography</Heading>
