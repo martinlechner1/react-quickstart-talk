@@ -58,7 +58,20 @@ export default class Presentation extends React.Component {
         transitionDuration={500}
         theme={theme}
       >
-        <Slide transition={["zoom"]} bgColor="primary">
+        <Slide
+          transition={["zoom"]}
+          bgColor="primary"
+          notes={`
+          Wer von euch hat schonmal mit React herumgespielt?
+          Wer von euch hat schonmal React in Production eingesetzt? 
+          Der Andy ist nur zum Spass hier^^
+          Warum React? 
+            - Knapp 70k Stars bei Github 
+            - Industry Adoption: Facebook, Instagram, AirBnB
+            - Deklarative UI Programmierung
+            - Weitere Platformen: React Native, React VR mit selbem Programmiermodell
+        `}
+        >
           <Heading size={1} fit caps lineHeight={1} textColor="secondary">
             React <S type="strikethrough">Native</S> Quickstart
           </Heading>
@@ -88,6 +101,7 @@ export default class Presentation extends React.Component {
         <Slide>
           <Heading size={6}>Components</Heading>
           <Text>Independent, reusable pieces of UI</Text>
+          <Text>Declarative way of Programming</Text>
         </Slide>
         <Slide>
           <Heading size={6}>Props</Heading>
@@ -114,6 +128,7 @@ export default class Presentation extends React.Component {
             Mount: Component is created and inserted into DOM the first time.
           </Text>
           <Text>Update: Changes to props or state</Text>
+          <Text>Only available on Class Components!</Text>
         </Slide>
         <Slide>
           <Heading size={6}>Refs</Heading>
@@ -155,20 +170,6 @@ export default class Presentation extends React.Component {
           <Text>Hides the build config from you</Text>
           <Text>PWA via Service Worker out of the box!</Text>
         </Slide>
-        <Slide transition={["fade"]} transitionDuration={1000}>
-          <Heading size={6}>Ecosystem</Heading>
-        </Slide>
-        <Slide>
-          <Heading size={6}>State Management</Heading>
-        </Slide>
-        <Slide>
-          <Heading size={6}>Redux</Heading>
-          {/* TODO*/}
-        </Slide>
-        <Slide>
-          <Heading size={6}>MobX</Heading>
-          {/* TODO*/}
-        </Slide>
         <Slide>
           <Heading size={6}>React Native</Heading>
           <Text>Native Bridge: JS -&gt; Native Elements</Text>
@@ -192,10 +193,47 @@ export default class Presentation extends React.Component {
           </Link>
         </Slide>
         <Slide>
+          <Heading size={6}>Tooling</Heading>
+        </Slide>
+        <Slide>
+          <Heading size={6}>Prettier</Heading>
+          <Text>JS -&gt; AST -&gt; Pretty printed code</Text>
+          <Text>Use this in every js project!</Text>
+        </Slide>
+        <Slide>
+          <Heading size={6}>Eslint</Heading>
+          <Text>Static code analysis for js</Text>
+          <Text>React plugin</Text>
+          <Text>AirBnB ruleset</Text>
+          <Text>Use this in every js project!</Text>
+        </Slide>
+        <Slide>
           <Heading size={6}>Flow</Heading>
           <Text>Static Type Checker</Text>
           <Text>Type Annotations</Text>
           <Text>Powerful Type Inference</Text>
+        </Slide>
+        <Slide>
+          <Heading size={6}>Ecosystem</Heading>
+        </Slide>
+        <Slide>
+          <Heading size={6}>Redux</Heading>
+          <Text>Store - Single Source of Truth</Text>
+          <Text>State - Read only</Text>
+          <Text>Update - Pure Functions (Reducer)</Text>
+          <Text>Triggered by Actions</Text>
+        </Slide>
+        <Slide>
+          <Heading size={6}>React-Redux</Heading>
+          <Text>Enhances React Components by Store and Actions</Text>
+        </Slide>
+        <Slide>
+          <Heading size={6}>MobX</Heading>
+          <Text>State management the FRP way</Text>
+        </Slide>
+        <Slide>
+          <Heading size={6}>React-Router</Heading>
+          <Text>Routing in browser</Text>
         </Slide>
         <Slide>
           <Heading size={6}>GraphQL</Heading>
@@ -211,6 +249,19 @@ export default class Presentation extends React.Component {
           <Text>OCaml Dialect + Toolbox</Text>
           <Text>Based on bloomberg/bucklescript</Text>
           <Text>Bindings for React API</Text>
+        </Slide>
+        <Slide>
+          <Heading size={6}>React vs Angular</Heading>
+          <Text>Thin library vs. fully blown framework</Text>
+        </Slide>
+        <Slide>
+          <Heading size={6}>Whom to ask?</Heading>
+          <List>
+            <ListItem>Franzi</ListItem>
+            <ListItem>Stephan D</ListItem>
+            <ListItem>Bastian G</ListItem>
+            <ListItem>Andy S</ListItem>
+          </List>
         </Slide>
 
         {/*
