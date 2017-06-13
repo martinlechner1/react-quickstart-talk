@@ -226,6 +226,7 @@ export default class Presentation extends React.Component {
         <Slide>
           <Heading size={6}>React-Redux</Heading>
           <Text>Enhances React Components by Store and Actions</Text>
+          <Text>Update to store -&gt; Update to Component</Text>
         </Slide>
         <Slide>
           <Heading size={6}>MobX</Heading>
@@ -233,7 +234,7 @@ export default class Presentation extends React.Component {
         </Slide>
         <Slide>
           <Heading size={6}>React-Router</Heading>
-          <Text>Routing in browser</Text>
+          <Text>Declarative Routing</Text>
         </Slide>
         <Slide>
           <Heading size={6}>GraphQL</Heading>
@@ -258,9 +259,9 @@ export default class Presentation extends React.Component {
           <Heading size={6}>Whom to ask?</Heading>
           <List>
             <ListItem>Franzi</ListItem>
-            <ListItem>Stephan D</ListItem>
-            <ListItem>Bastian G</ListItem>
-            <ListItem>Andy S</ListItem>
+            <ListItem>Stephan D.</ListItem>
+            <ListItem>Bastian G.</ListItem>
+            <ListItem>Andy S.</ListItem>
           </List>
         </Slide>
 
