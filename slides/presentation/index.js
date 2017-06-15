@@ -161,7 +161,7 @@ export default class Presentation extends React.Component {
           <Text>Some frameworks, e.g. zeit/next.js</Text>
         </Slide>
         <Slide notes="babel, webpack, etc.">
-          <Heading size={6}>Let's get started!</Heading>
+          <Heading size={6}>Let&#39;s get started!</Heading>
           <Text>Want to configure a zillion of Tools?</Text>
         </Slide>
         <Slide>
