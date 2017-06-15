@@ -175,7 +175,7 @@ export default class Presentation extends React.Component {
           <Text>Native Bridge: JS -&gt; Native Elements</Text>
           <Text>e.g. <Code>{"<View />"}</Code> -&gt; UIView, android.View</Text>
           <Text>Create-React-Native-App</Text>
-          <Link href="https://snack.expo.io">
+          <Link href="https://snack.expo.io" target="_blank">
             Playground
           </Link>
         </Slide>
@@ -188,7 +188,7 @@ export default class Presentation extends React.Component {
         </Slide>
         <Slide>
           <Heading size={6}>React VR</Heading>
-          <Link href="http://localhost:8081/vr/">
+          <Link href="http://localhost:8081/vr/" target="_blank">
             Demo
           </Link>
         </Slide>
@@ -253,7 +253,7 @@ export default class Presentation extends React.Component {
         </Slide>
         <Slide>
           <Heading size={6}>React vs Angular</Heading>
-          <Text>Thin library vs. fully blown framework</Text>
+          <Text>Thin view library vs. fully blown framework</Text>
         </Slide>
         <Slide>
           <Heading size={6}>Whom to ask?</Heading>
@@ -303,15 +303,15 @@ export default class Presentation extends React.Component {
           </Heading>
           <List size={6}>
             <ListItem>
-              <Link href="https://facebook.github.io/react">React</Link>
+              <Link href="https://facebook.github.io/react" target="_blank">React</Link>
             </ListItem>
             <ListItem>
-              <Link href="https://github.com/facebookincubator/create-react-app">
+              <Link href="https://github.com/facebookincubator/create-react-app" target="_blank">
                 Create-React-App
               </Link>
             </ListItem>
             <ListItem>
-              <Link href="http://redux.js.org/">
+              <Link href="http://redux.js.org/" target="_blank">
                 Redux
               </Link>
             </ListItem>
@@ -321,7 +321,9 @@ export default class Presentation extends React.Component {
           <Heading size={5} textColor="tertiary">
             Slides and Demo code
           </Heading>
-          <Text>https://github.com/martinlechner1/react-quickstart-talk</Text>
+          <Link  href="https://github.com/facebookincubator/create-react-app" target="_blank">
+            github.com/martinlechner1/react-quickstart-talk
+          </Link>
         </Slide>
       </Deck>
     );
