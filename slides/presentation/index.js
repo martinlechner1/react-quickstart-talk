@@ -15,6 +15,7 @@ import {
   CodePane,
   Code,
   Link,
+  Image,
   S
 } from "spectacle";
 
@@ -32,7 +33,8 @@ const images = {
   city: require("../assets/city.jpg"),
   kat: require("../assets/kat.png"),
   logo: require("../assets/formidable-logo.svg"),
-  markdown: require("../assets/markdown.png")
+  markdown: require("../assets/markdown.png"),
+  mobx: require("../assets/mobx.png")
 };
 
 preloader(images);
@@ -143,16 +145,13 @@ export default class Presentation extends React.Component {
             lang="jsx"
             source={require("raw-loader!../../code/src/logProps.js")}
           />
-          <Text />
+        </Slide>
+        <Slide>
+          <Heading size={6}>Higher Order Components use</Heading>
           <CodePane
             lang="jsx"
             source={require("raw-loader!../../code/src/HelloWithLog.js")}
           />
-        </Slide>
-        <Slide>
-          <Heading size={6}>Testing</Heading>
-          <Text>Jest</Text>
-          <Text>Enzyme</Text>
         </Slide>
         <Slide>
           <Heading size={6}>Server side rendering</Heading>
@@ -214,6 +213,14 @@ export default class Presentation extends React.Component {
           <Text>Powerful Type Inference</Text>
         </Slide>
         <Slide>
+          <Heading size={6}>Jest</Heading>
+          <Text>Best JS Test Tool</Text>
+          <Text>Easy Setup</Text>
+          <Text>Snapshot Testing</Text>
+          <Text>Async/Await for Promises</Text>
+          <Text>Code coverage out of the box</Text>
+        </Slide>
+        <Slide>
           <Heading size={6}>Ecosystem</Heading>
         </Slide>
         <Slide>
@@ -224,32 +231,64 @@ export default class Presentation extends React.Component {
           <Text>Triggered by Actions</Text>
         </Slide>
         <Slide>
+          <Heading size={6}>Redux</Heading>
+          <CodePane
+            source={require("raw-loader!../../code/src/Redux.js")}
+            lang="javascript"
+          />
+        </Slide>
+        <Slide>
           <Heading size={6}>React-Redux</Heading>
-          <Text>Enhances React Components by Store and Actions</Text>
+          <Text>Enhances React Components by Store-State and Actions</Text>
           <Text>Update to store -&gt; Update to Component</Text>
+        </Slide>
+        <Slide notes="Assuming you linked your store to the react app">
+          <Heading size={6}>React-Redux</Heading>
+          <CodePane
+            source={require("raw-loader!../../code/src/React-Redux.js")}
+            lang="javascript"
+          />
         </Slide>
         <Slide>
           <Heading size={6}>MobX</Heading>
-          <Text>State management the FRP way</Text>
+          <Text>Reactive Programming</Text>
+          <Image src={images.mobx} width="50%" height="50%" />
         </Slide>
         <Slide>
           <Heading size={6}>React-Router</Heading>
           <Text>Declarative Routing</Text>
+          <CodePane
+            source={require("raw-loader!../../code/src/Router.js")}
+            lang="jsx"
+          />
         </Slide>
         <Slide>
           <Heading size={6}>GraphQL</Heading>
-          <Text>Query language for your API</Text>
+          <Text>Query language/protocol for your API</Text>
           <Text>
             Typed Schema -&gt; Query -&gt; Only get what you requested
           </Text>
           <Text>Relay</Text>
-          <Text>Apollo</Text>
+          <Text>Apollo Stack</Text>
+        </Slide>
+        <Slide>
+          <Heading size={6}>Apolloclient</Heading>
+          <CodePane
+            source={require("raw-loader!../../code/src/GraphQL.js")}
+            lang="jsx"
+          />
         </Slide>
         <Slide>
           <Heading size={6}>Reason</Heading>
           <Text>OCaml Dialect + Toolbox</Text>
           <Text>Based on bloomberg/bucklescript</Text>
           <Text>Bindings for React API</Text>
+        </Slide>
+        <Slide>
+          <CodePane
+            lang="reason"
+            source={require("raw-loader!../../code/src/Page.re")}
+          />
         </Slide>
         <Slide>
           <Heading size={6}>React vs Angular</Heading>
@@ -259,9 +298,16 @@ export default class Presentation extends React.Component {
           <Heading size={6}>Whom to ask?</Heading>
           <List>
             <ListItem>Franzi</ListItem>
-            <ListItem>Stephan D.</ListItem>
-            <ListItem>Bastian G.</ListItem>
-            <ListItem>Andy S.</ListItem>
+            <ListItem>Stephan</ListItem>
+            <ListItem>Bastian</ListItem>
+            <ListItem>Andy</ListItem>
+          </List>
+        </Slide>
+        <Slide>
+          <Heading size={6}>Acknowledgements</Heading>
+          <List>
+            <ListItem>Andy</ListItem>
+            <ListItem>Jambit GmbH</ListItem>
           </List>
         </Slide>
         <Slide>
@@ -270,10 +316,15 @@ export default class Presentation extends React.Component {
           </Heading>
           <List size={6}>
             <ListItem>
-              <Link href="https://facebook.github.io/react" target="_blank">React</Link>
+              <Link href="https://facebook.github.io/react" target="_blank">
+                React
+              </Link>
             </ListItem>
             <ListItem>
-              <Link href="https://github.com/facebookincubator/create-react-app" target="_blank">
+              <Link
+                href="https://github.com/facebookincubator/create-react-app"
+                target="_blank"
+              >
                 Create-React-App
               </Link>
             </ListItem>
@@ -282,13 +333,21 @@ export default class Presentation extends React.Component {
                 Redux
               </Link>
             </ListItem>
+            <ListItem>
+              <Link href="https://mobx.js.org/getting-started.html">
+                MobX intro (and image source)
+              </Link>
+            </ListItem>
           </List>
         </Slide>
         <Slide>
           <Heading size={5} textColor="tertiary">
             Slides and Demo code
           </Heading>
-          <Link  href="https://github.com/facebookincubator/create-react-app" target="_blank">
+          <Link
+            href="https://github.com/facebookincubator/create-react-app"
+            target="_blank"
+          >
             github.com/martinlechner1/react-quickstart-talk
           </Link>
         </Slide>
