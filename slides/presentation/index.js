@@ -161,7 +161,7 @@ export default class Presentation extends React.Component {
           <Text>Some frameworks, e.g. zeit/next.js</Text>
         </Slide>
         <Slide notes="babel, webpack, etc.">
-          <Heading size={6}>Let's get started!</Heading>
+          <Heading size={6}>Let&#39;s get started!</Heading>
           <Text>Want to configure a zillion of Tools?</Text>
         </Slide>
         <Slide>
@@ -175,7 +175,7 @@ export default class Presentation extends React.Component {
           <Text>Native Bridge: JS -&gt; Native Elements</Text>
           <Text>e.g. <Code>{"<View />"}</Code> -&gt; UIView, android.View</Text>
           <Text>Create-React-Native-App</Text>
-          <Link href="https://snack.expo.io">
+          <Link href="https://snack.expo.io" target="_blank">
             Playground
           </Link>
         </Slide>
@@ -188,7 +188,7 @@ export default class Presentation extends React.Component {
         </Slide>
         <Slide>
           <Heading size={6}>React VR</Heading>
-          <Link href="http://localhost:8081/vr/">
+          <Link href="http://localhost:8081/vr/" target="_blank">
             Demo
           </Link>
         </Slide>
@@ -253,7 +253,7 @@ export default class Presentation extends React.Component {
         </Slide>
         <Slide>
           <Heading size={6}>React vs Angular</Heading>
-          <Text>Thin library vs. fully blown framework</Text>
+          <Text>Thin view library vs. fully blown framework</Text>
         </Slide>
         <Slide>
           <Heading size={6}>Whom to ask?</Heading>
@@ -264,54 +264,21 @@ export default class Presentation extends React.Component {
             <ListItem>Andy S.</ListItem>
           </List>
         </Slide>
-
-        {/*
-        <Slide transition={['fade']} bgColor="tertiary">
-          <Heading size={6} textColor="primary" caps>Typography</Heading>
-          <Heading size={1} textColor="secondary">Heading 1</Heading>
-          <Heading size={2} textColor="secondary">Heading 2</Heading>
-          <Heading size={3} textColor="secondary">Heading 3</Heading>
-          <Heading size={4} textColor="secondary">Heading 4</Heading>
-          <Heading size={5} textColor="secondary">Heading 5</Heading>
-          <Text size={6} textColor="secondary">Standard text</Text>
-        </Slide>
-        <Slide transition={['fade']} bgColor="primary" textColor="tertiary">
-          <Heading size={6} textColor="secondary" caps>Standard List</Heading>
-          <List>
-            <ListItem>Item 1</ListItem>
-            <ListItem>Item 2</ListItem>
-            <ListItem>Item 3</ListItem>
-            <ListItem>Item 4</ListItem>
-          </List>
-        </Slide>
-        <Slide transition={['fade']} bgColor="secondary" textColor="primary">
-          <BlockQuote>
-            <Quote>Example Quote</Quote>
-            <Cite>Author</Cite>
-          </BlockQuote>
-        </Slide>
-        <Slide transition={['fade']} bgColor="secondary" textColor="primary">
-          <CodePane lang="jsx">
-            {
-              'const Button = ({ title }) => (<button type="button">{ title }</button>);'
-            }
-          </CodePane>
-        </Slide>*/}
         <Slide>
           <Heading size={5} textColor="tertiary">
             Links
           </Heading>
           <List size={6}>
             <ListItem>
-              <Link href="https://facebook.github.io/react">React</Link>
+              <Link href="https://facebook.github.io/react" target="_blank">React</Link>
             </ListItem>
             <ListItem>
-              <Link href="https://github.com/facebookincubator/create-react-app">
+              <Link href="https://github.com/facebookincubator/create-react-app" target="_blank">
                 Create-React-App
               </Link>
             </ListItem>
             <ListItem>
-              <Link href="http://redux.js.org/">
+              <Link href="http://redux.js.org/" target="_blank">
                 Redux
               </Link>
             </ListItem>
@@ -321,7 +288,9 @@ export default class Presentation extends React.Component {
           <Heading size={5} textColor="tertiary">
             Slides and Demo code
           </Heading>
-          <Text>https://github.com/martinlechner1/react-quickstart-talk</Text>
+          <Link  href="https://github.com/facebookincubator/create-react-app" target="_blank">
+            github.com/martinlechner1/react-quickstart-talk
+          </Link>
         </Slide>
       </Deck>
     );
