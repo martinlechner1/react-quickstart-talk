@@ -108,6 +108,7 @@ export default class Presentation extends React.Component {
         <Slide>
           <Heading size={6}>Props</Heading>
           <Text>Anything can be passed via attributes as seen before</Text>
+          <Text>Changes to props -> re-render</Text>
         </Slide>
         <Slide notes="ES6 classes, Note this.props!">
           <Heading size={6}>Class Components</Heading>
@@ -195,22 +196,11 @@ export default class Presentation extends React.Component {
           <Heading size={6}>Tooling</Heading>
         </Slide>
         <Slide>
-          <Heading size={6}>Prettier</Heading>
-          <Text>JS -&gt; AST -&gt; Pretty printed code</Text>
-          <Text>Use this in every js project!</Text>
-        </Slide>
-        <Slide>
           <Heading size={6}>Eslint</Heading>
           <Text>Static code analysis for js</Text>
           <Text>React plugin</Text>
           <Text>AirBnB ruleset</Text>
           <Text>Use this in every js project!</Text>
-        </Slide>
-        <Slide>
-          <Heading size={6}>Flow</Heading>
-          <Text>Static Type Checker</Text>
-          <Text>Type Annotations</Text>
-          <Text>Powerful Type Inference</Text>
         </Slide>
         <Slide>
           <Heading size={6}>Jest</Heading>
@@ -220,6 +210,19 @@ export default class Presentation extends React.Component {
           <Text>Async/Await for Promises</Text>
           <Text>Code coverage out of the box</Text>
         </Slide>
+        <Slide>
+          <Heading size={6}>Prettier</Heading>
+          <Text>JS -&gt; AST -&gt; Pretty printed code</Text>
+          <Text>Use this in every js project!</Text>
+        </Slide>
+
+        <Slide>
+          <Heading size={6}>Flow</Heading>
+          <Text>Static Type Checker</Text>
+          <Text>Type Annotations</Text>
+          <Text>Powerful Type Inference</Text>
+        </Slide>
+
         <Slide>
           <Heading size={6}>Ecosystem</Heading>
         </Slide>
