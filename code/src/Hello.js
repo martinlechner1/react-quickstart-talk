@@ -1,7 +1,7 @@
 import React from "react";
 
 function Hello(props) {
-  return <span>Hello {props.name}</span>;
+  return <p>Hello {props.name}</p>;
 }
 
 export default Hello;

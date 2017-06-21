@@ -1,6 +1,7 @@
 import React, { Component } from "react";
+import Hello from "./Hello";
 
-class Hello extends Component {
+class HelloState extends Component {
   constructor(props) {
     super();
     this.state = {
@@ -15,11 +16,11 @@ class Hello extends Component {
   render() {
     return (
       <div>
-        <p>Hello {this.state.name}</p>
+        <Hello name={this.state.name} />
         <input type="text" onChange={this.updateText} value={this.state.name} />
       </div>
     );
   }
 }
 
-export default Hello;
+export default HelloState;

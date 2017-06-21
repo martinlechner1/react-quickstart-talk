@@ -64,14 +64,15 @@ export default class Presentation extends React.Component {
           transition={["zoom"]}
           bgColor="primary"
           notes={`
+          Wer weiß, was React ist?
           Wer von euch hat schonmal mit React herumgespielt?
           Wer von euch hat schonmal React in Production eingesetzt? 
-          Der Andy ist nur zum Spass hier^^
+
           Warum React? 
-            - Knapp 70k Stars bei Github 
-            - Industry Adoption: Facebook, Instagram, AirBnB
-            - Deklarative UI Programmierung
-            - Weitere Platformen: React Native, React VR mit selbem Programmiermodell
+            - Sehr beliebte SPA Library mit knapp 70k Stars bei Github 
+            - hohe Industry Adoption: Facebook, Instagram, AirBnB
+            - Deklarative UI Programmierung: Einfach zu lesen, verstehen und schreiben
+            - Weitere Ziel-Platformen: React Native, React VR mit selbem Programmiermodell
         `}
         >
           <Heading size={1} fit caps lineHeight={1} textColor="secondary">
@@ -81,14 +82,26 @@ export default class Presentation extends React.Component {
             Martin Lechner - @martinlechner1
           </Text>
         </Slide>
-        <Slide notes="WTF HTML in JS?!? - Called JSX, Transpiled via babel">
+        <Slide
+          notes={`
+          - In React besteht die UI aus sogenannten Components
+          - Funktionen / Classen die die UI beschreiben
+          - WTF HTML in JS? -> JSX, Transpiled via babel
+        `}
+        >
           <Heading size={6}>Hello World</Heading>
           <CodePane
             lang="jsx"
             source={require("raw-loader!../../code/src/HelloWorld.js")}
           />
         </Slide>
-        <Slide notes="Props: Object passed to the component">
+        <Slide
+          notes={`
+          - Statische Component ist ziemlich langweilig
+          - Components können Props übergeben bekommen
+          - Attribute an den Custom Element Tags -> Props
+        `}
+        >
           <Heading size={6}>Hello Extended</Heading>
           <CodePane
             lang="jsx"
@@ -104,20 +117,33 @@ export default class Presentation extends React.Component {
           <Heading size={6}>Components</Heading>
           <Text>Independent, reusable pieces of UI</Text>
           <Text>Declarative way of Programming</Text>
+          <Text>Props passed via attributes</Text>
+          <Text>Changes to props -&gt; re-render the Component</Text>
         </Slide>
-        <Slide>
-          <Heading size={6}>Props</Heading>
-          <Text>Anything can be passed via attributes as seen before</Text>
-          <Text>Changes to props -> re-render</Text>
-        </Slide>
-        <Slide notes="ES6 classes, Note this.props!">
+        <Slide
+          notes={`
+          - Bisher functional components
+          - Class Components bieten noch mehr Möglichkeiten
+          - ES6 Class, extends Component
+          - Render method, this.props
+        `}
+        >
           <Heading size={6}>Class Components</Heading>
           <CodePane
             lang="jsx"
             source={require("raw-loader!../../code/src/HelloClass.js")}
           />
         </Slide>
-        <Slide>
+        <Slide
+          notes={`
+          - Jede Anwendung hat einen Zustand
+          - Änderungen am State mit this.setState() sorgen für ein re-render
+          - Zustand ist hier der Text
+          - Tippen im Textfeld feuert synthetische Events
+          - Ruft setState auf -> update der UI
+          TODO: Demo, evtl mit Hello Component
+        `}
+        >
           <Heading size={6}>State</Heading>
           <CodePane
             lang="jsx"
@@ -125,22 +151,31 @@ export default class Presentation extends React.Component {
           />
         </Slide>
         <Slide>
-          <Heading size={6}>Lifecycle</Heading>
-          <Text>Hooks for certain events</Text>
+          <Heading size={6}>Component Lifecycle</Heading>
           <Text>
             Mount: Component is created and inserted into DOM the first time.
           </Text>
           <Text>Update: Changes to props or state</Text>
+          <Text>Hooks for lifecycle events</Text>
           <Text>Only available on Class Components!</Text>
         </Slide>
-        <Slide>
+        <Slide
+          notes={`
+          - Usecase: direkt mit DOMNodes interagieren
+          - Class Components only
+        `}
+        >
           <Heading size={6}>Refs</Heading>
           <CodePane
             lang="jsx"
             source={require("raw-loader!../../code/src/RefExample.js")}
           />
         </Slide>
-        <Slide notes="Wraps other components and has access to props">
+        <Slide
+          notes={`
+        - Wraps other components
+        - Z.b. Can access and modify props`}
+        >
           <Heading size={6}>Higher Order Components</Heading>
           <CodePane
             lang="jsx"
@@ -154,29 +189,39 @@ export default class Presentation extends React.Component {
             source={require("raw-loader!../../code/src/HelloWithLog.js")}
           />
         </Slide>
-        <Slide>
-          <Heading size={6}>Server side rendering</Heading>
-          <Text>Bring down time to first meaningful paint</Text>
-          <Text>When JS is fully loaded ui becomes interactive</Text>
-          <Text>Some frameworks, e.g. zeit/next.js</Text>
-        </Slide>
         <Slide notes="babel, webpack, etc.">
-          <Heading size={6}>Let&#39;s get started!</Heading>
-          <Text>Want to configure a zillion of Tools?</Text>
+          <Heading size={6}>Let's get started!</Heading>
+          <Text>Who wants to configure a zillion of Tools?</Text>
         </Slide>
         <Slide>
           <Heading size={6}>Create-React-App ftw!</Heading>
           <Text>Creates a project using good standards</Text>
           <Text>Hides the build config from you</Text>
+          <Text>Hot code swap, etc.</Text>
+          <Text>Highly optimized production config</Text>
           <Text>PWA via Service Worker out of the box!</Text>
         </Slide>
         <Slide>
           <Heading size={6}>React Native</Heading>
-          <Text>Native Bridge: JS -&gt; Native Elements</Text>
+          <Text>
+            JS -&gt; Messages -&gt; Native Bridge -&gt; Native Elements
+          </Text>
           <Text>e.g. <Code>{"<View />"}</Code> -&gt; UIView, android.View</Text>
           <Text>Create-React-Native-App</Text>
           <Link href="https://snack.expo.io" target="_blank">
             Playground
+          </Link>
+        </Slide>
+        <Slide
+          notes={`
+          - Built on top of react-native
+          - Target VR Headsets
+          - Preview in Browser possible
+        `}
+        >
+          <Heading size={6}>React VR</Heading>
+          <Link href="http://localhost:8081/vr/" target="_blank">
+            Demo
           </Link>
         </Slide>
         <Slide>
@@ -185,12 +230,6 @@ export default class Presentation extends React.Component {
             lang="jsx"
             source={require("raw-loader!../../vr/index.vr.js")}
           />
-        </Slide>
-        <Slide>
-          <Heading size={6}>React VR</Heading>
-          <Link href="http://localhost:8081/vr/" target="_blank">
-            Demo
-          </Link>
         </Slide>
         <Slide>
           <Heading size={6}>Tooling</Heading>
@@ -202,27 +241,37 @@ export default class Presentation extends React.Component {
           <Text>AirBnB ruleset</Text>
           <Text>Use this in every js project!</Text>
         </Slide>
-        <Slide>
+        <Slide
+          notes={`
+          - SNAPSHOT: expect matcher ist toMatchSnapshot()
+          - Wird beim ersten Aufruf gespeichert
+          - Wenn sich etwas ändert failed der Test und man wird gefragt ob man den neuen
+          Wert übernehmen will
+        `}
+        >
           <Heading size={6}>Jest</Heading>
           <Text>Best JS Test Tool</Text>
-          <Text>Easy Setup</Text>
+          <Text>Easy Setup & Migration</Text>
           <Text>Snapshot Testing</Text>
-          <Text>Async/Await for Promises</Text>
+          <Text>Async/Await for Promise Testing</Text>
           <Text>Code coverage out of the box</Text>
         </Slide>
         <Slide>
           <Heading size={6}>Prettier</Heading>
-          <Text>JS -&gt; AST -&gt; Pretty printed code</Text>
-          <Text>Use this in every js project!</Text>
+          <Text>Code Formatting</Text>
+          <Text>JS -&gt; parse AST -&gt; Pretty printed code</Text>
         </Slide>
-
         <Slide>
           <Heading size={6}>Flow</Heading>
-          <Text>Static Type Checker</Text>
+          <Text>Static Type Checking</Text>
           <Text>Type Annotations</Text>
           <Text>Powerful Type Inference</Text>
         </Slide>
-
+        <Slide>
+          <Heading size={6}>React Dev Tools</Heading>
+          <Text>Chrome</Text>
+          <Text>Standalone (Electron)</Text>
+        </Slide>
         <Slide>
           <Heading size={6}>Ecosystem</Heading>
         </Slide>
@@ -231,7 +280,7 @@ export default class Presentation extends React.Component {
           <Text>Store - Single Source of Truth</Text>
           <Text>State - Read only</Text>
           <Text>Update - Pure Functions (Reducer)</Text>
-          <Text>Triggered by Actions</Text>
+          <Text>Action -&gt; Store -&gt; Reducer -&gt; new State</Text>
         </Slide>
         <Slide>
           <Heading size={6}>Redux</Heading>
@@ -244,20 +293,39 @@ export default class Presentation extends React.Component {
           <Heading size={6}>React-Redux</Heading>
           <Text>Enhances React Components by Store-State and Actions</Text>
           <Text>Update to store -&gt; Update to Component</Text>
+          <Text>Action creator calls dispatched to store</Text>
         </Slide>
-        <Slide notes="Assuming you linked your store to the react app">
+        <Slide
+          notes={`
+          - You need to link Redux Store to React App on root element
+          - mapStateToProps: Select part of state as props for your component
+          - mapDispatchToProps: Add dispatchable Actions to your component
+        `}
+        >
           <Heading size={6}>React-Redux</Heading>
           <CodePane
             source={require("raw-loader!../../code/src/React-Redux.js")}
             lang="javascript"
           />
         </Slide>
-        <Slide>
+        {/*<Slide>
           <Heading size={6}>MobX</Heading>
           <Text>Reactive Programming</Text>
           <Image src={images.mobx} width="50%" height="50%" />
-        </Slide>
+        </Slide>*/}
         <Slide>
+          <Heading size={6}>React Alternatives</Heading>
+          <Text>Smaller package size</Text>
+          <Text>Faster</Text>
+          <Text>Not fully api compatible with React</Text>
+          <Text>Preact</Text>
+          <Text>InfernoJS</Text>
+        </Slide>
+        <Slide
+          notes={`- declarative routing
+        - example shows only small subset of possibilities
+        `}
+        >
           <Heading size={6}>React-Router</Heading>
           <Text>Declarative Routing</Text>
           <CodePane
@@ -266,25 +334,43 @@ export default class Presentation extends React.Component {
           />
         </Slide>
         <Slide>
+          <Heading size={6}>CSS in JS</Heading>
+          <Text>aka. colocated styles</Text>
+          <Text>Glamor, Styled-Components</Text>
+          <CodePane
+            source={require("raw-loader!../../code/src/App.js")}
+            lang="jsx"
+          />
+        </Slide>
+        <Slide
+          notes={`
+          - Server 
+        `}
+        >
           <Heading size={6}>GraphQL</Heading>
-          <Text>Query language/protocol for your API</Text>
-          <Text>
-            Typed Schema -&gt; Query -&gt; Only get what you requested
-          </Text>
-          <Text>Relay</Text>
+          <Text>Query language/protocol for API communication</Text>
+          <Text>Unite multiple resources (REST, DB, ...) in one Api call</Text>
+          <Text>Typed Schema with attached data resolvers</Text>
+          <Text>Specify what you get from the Api</Text>
           <Text>Apollo Stack</Text>
+          <Text>Relay</Text>
         </Slide>
         <Slide>
-          <Heading size={6}>Apolloclient</Heading>
+          <Heading size={6}>Apollo-Client</Heading>
           <CodePane
             source={require("raw-loader!../../code/src/GraphQL.js")}
             lang="jsx"
           />
         </Slide>
-        <Slide>
+        <Slide
+          notes={`
+          - Facebook setzt das bei einigen Dingen ein
+          - Flow, Hack, Infer
+        `}
+        >
           <Heading size={6}>Reason</Heading>
           <Text>OCaml Dialect + Toolbox</Text>
-          <Text>Based on bloomberg/bucklescript</Text>
+          <Text>Based on bucklescript</Text>
           <Text>Bindings for React API</Text>
         </Slide>
         <Slide>
@@ -294,8 +380,20 @@ export default class Presentation extends React.Component {
           />
         </Slide>
         <Slide>
+          <Heading size={6}>Server side rendering</Heading>
+          <Text>Bring down time to first meaningful paint</Text>
+          <Text>When JS is fully loaded ui becomes interactive</Text>
+          <Text>Some frameworks, e.g. zeit/next.js</Text>
+        </Slide>
+        <Slide
+          notes={`
+          - Äpfel und Birnen, sollte man eigentlich nicht vergleichen
+          - React ist nur View Layer und hat daher weniger Magic
+          - Man muss dafür bei einigen Dingen mehr Entscheidungen selbst treffen
+        `}
+        >
           <Heading size={6}>React vs Angular</Heading>
-          <Text>Thin view library vs. fully blown framework</Text>
+          <Text>View library vs. fully blown framework</Text>
         </Slide>
         <Slide>
           <Heading size={6}>Whom to ask?</Heading>
@@ -336,11 +434,6 @@ export default class Presentation extends React.Component {
                 Redux
               </Link>
             </ListItem>
-            <ListItem>
-              <Link href="https://mobx.js.org/getting-started.html">
-                MobX intro (and image source)
-              </Link>
-            </ListItem>
           </List>
         </Slide>
         <Slide>
@@ -348,7 +441,7 @@ export default class Presentation extends React.Component {
             Slides and Demo code
           </Heading>
           <Link
-            href="https://github.com/facebookincubator/create-react-app"
+            href="https://github.com/martinlechner1/react-quickstart-talk"
             target="_blank"
           >
             github.com/martinlechner1/react-quickstart-talk

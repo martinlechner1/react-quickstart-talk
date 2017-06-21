@@ -19,5 +19,5 @@ function todos(state = [], action) {
 }
 // Store
 const store = createStore(combineReducers({ todos }));
-// Dispatch action
-store.dispatch(addTodo("Learn about actions"));
+// Dispatch action (example)
+store.dispatch(addTodo("Learn more about redux"));
